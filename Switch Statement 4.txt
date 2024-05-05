@@ -1,0 +1,42 @@
+Problem statement:4
+Programming languages have some conditional / decision-making statements that execute when some specific condition is fulfilled.
+
+Switch-case is one of the ways to implement them.
+In a menu-driven program, the user is given a set of choices of things to do (the menu) and then is asked to select a menu item.
+
+There are 2 choices in the menu:
+Choice 1 is to find the area of a circle having radius 'r'.
+Choice 2 is to find the area of a rectangle having dimensions 'l' and 'b'.
+
+You are given the choice 'ch' and an array 'a'.
+If ‘ch’ is 1, ‘a’ contains a single number ‘r’. If ‘ch’ is 2, ‘a’ contains 2 numbers, ‘l’ and ‘b’.
+
+Consider the choice and print the appropriate area.
+Example :
+Input: ‘ch’ = 2 and ‘a’ = [3, 2]
+Output: area = 6
+
+Explanation: Since the choice ‘ch’ is 2, we have to print the area of the rectangle having ‘l’ = 3 and ‘b’ = 2, which is 6.
+
+////////SOLUTION//////
+public class Solution {
+    public static double areaSwitchCase(int ch, double []a) {
+        // double pi=3.14;
+       switch(ch){
+           //case 1 for the find the area of the circle
+            case 1:
+              double radius = a[0];
+                return Math.PI * Math.pow(radius, 2);
+            
+
+            //case 2 for the finding the area of the ractangle
+            case 2:
+                return a[0]*a[1];
+            
+            
+            default:
+                System.out.println("Invalid input");
+                 return -1;
+       }
+}
+}
