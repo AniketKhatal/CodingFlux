@@ -1,0 +1,27 @@
+//problem
+https://www.geeksforgeeks.org/problems/count-digits5716/1
+Given a number N. Count the number of digits in N which evenly divide N.
+Note :- Evenly divides means whether N is divisible by a digit i.e. leaves a remainder 0 when divided.
+
+Example 1:
+Input:
+N = 12
+Output:
+2
+Explanation:
+1, 2 both divide 12 evenly
+////////Solution////////
+//User function Template for Java
+class Solution{
+    static int evenlyDivides(int N){
+        int count=0;
+        int originalN=N;
+        while(N >0){
+            int Digit = N % 10;
+            if(Digit != 0 && originalN % Digit == 0){
+                count++;
+            }
+            N /= 10;
+        }
+        return count;
+    }
