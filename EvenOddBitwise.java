@@ -8,10 +8,10 @@ public class EvenOddBitwise {
             System.out.println("Enter the number:");
             int num = sc.nextInt();
             if ((num & 1) == 1) {
-                System.out.println("Given number is Even");
+                System.out.println("Given number is odd");
             }
             else{
-                System.out.println("Number is odd");
+                System.out.println("Number is Even");
             }
         }
     }
